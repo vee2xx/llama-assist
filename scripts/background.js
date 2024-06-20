@@ -23,6 +23,9 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
 chrome.runtime.onMessage.addListener(async function(request, sender, sendResponse) {
     if(request.action === 'saveAndExecute') {
         const code = await getCode(request.userPrompt);
+        if (code == null) {
+          throw new Error("Could not generate script.")
+        }
 
         // var currentWindow = await chrome.windows.getCurrent(); //current window in case more than one is open as then there will be more than one active tab
         // const tabs = await chrome.tabs.query({ active: true, windowId: currentWindow.id });
