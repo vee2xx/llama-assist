@@ -7,7 +7,7 @@
     <title>JS Executor</title>
 </head>
 <body>
-    <div class="container mt-3">
+    <div class="container mt-3 col-lg-4">
         <nav class="navbar navbar-light bg-light">
             <a class="navbar-brand" href="#">
                 Your Helpful Llama Assistant
@@ -16,9 +16,16 @@
         <div class="card mt-3 mb-3">
             <div class="card-body">
                 <label>Enter a prompt</label>
-                <textarea id="codeInput" placeholder="Log the page title to console" rows="10"></textarea>
-                <a href="#" class="btn btn-primary" id="runButton">Run</a>
-                <pre id="output"></pre> 
+                <textarea id="userPrompt" placeholder="Log the page title to console" rows="5" cols="40"></textarea>
+                <div>
+                    <a href="#" class="btn btn-primary" id="genButton">Get Script</a>
+                </div>
+
+                <label>Script</label>
+                <textarea id="generatedScript" rows="5" cols="40"></textarea>
+                <div>
+                    <a href="#" class="btn btn-primary" id="runButton">Run</a>
+                </div>
             </div>
         </div>
         <div class="card-footer text-body-secondary">

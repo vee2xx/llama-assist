@@ -18,11 +18,10 @@
       "128": "images/llama_128.png"
     }
   },
-  "permissions": ["storage", "activeTab", "scripting", "tabs"],
-  "host_permissions": [
-    "https://*/"
-  ],
+  "permissions": ["storage", "activeTab", "scripting", "tabs"], 
+  "host_permissions": ["<all_urls>"
+],
   "background": {
-    "service_worker": "scripts/background.js"
+    "service_worker": "scripts/worker.js"
   }
 }
